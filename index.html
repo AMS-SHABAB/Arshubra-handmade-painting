@@ -1,272 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Arshubra – Elevate your style with handmade painting, leather, sneakers, and ceramic customization. Unique art crafted with passion.">
-  <meta name="keywords" content="Arshubra, handmade painting, leather customization, sneakers art, ceramic art, custom design, aesthetic art">
-  <meta name="author" content="Arshubra">
-  <title>Arshubra | Handmade & Custom Art Services</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-<meta name="theme-color" content="#ff0000">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Only ONE theme-color meta tag, content set by JS -->
+  <meta name="theme-color" id="themeColorMeta" content="#fff">
+  <title>Hero Section</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:wght@700&family=PT+Serif+Caption&family=Montserrat:wght@100;400;500&family=Roboto:wght@400&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-      padding: 0;
-      margin: 0;
-    }
-
     body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
-      color: white;
-      min-height: 100vh;
-      overflow-x: hidden;
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(to bottom, #fff 70%, #ffffff 30%);
+      color: #111;
     }
-
-    header {
-      text-align: center;
-      padding: 2rem 1rem 1rem;
-    }
-
-    header img {
-      width: 100px;
-      height: auto;
-      margin-bottom: 1rem;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      background: linear-gradient(45deg, #00d2ff, #3a47d5);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: fadeInDown 1s ease;
-    }
-
-    .services, .portfolio, .contact {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      padding: 3rem 2rem;
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 20px;
-      padding: 2rem;
-      backdrop-filter: blur(15px);
-      -webkit-backdrop-filter: blur(15px);
-      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
-      transition: transform 0.3s ease;
-      animation: fadeInUp 1s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-10px);
-    }
-
-    .icon {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      color: #00d2ff;
-    }
-
-    h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    p {
-      font-size: 1rem;
-      line-height: 1.5;
-    }
-
-    .portfolio img {
-      width: 100%;
-      border-radius: 15px;
-      height: 200px;
-      object-fit: cover;
-      border: 2px solid rgba(255,255,255,0.1);
-    }
-
-    .contact .card {
-      text-align: center;
-    }
-
-    .socials {
-      margin-top: 1rem;
-    }
-
-    .socials a {
-      margin: 0 10px;
-      font-size: 1.5rem;
-      color: #00d2ff;
-      transition: color 0.3s;
-    }
-
-    .socials a:hover {
-      color: #ffffff;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      opacity: 0.6;
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Modal Popup */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,0.75);
-      justify-content: center;
-      align-items: center;
-    }
-
-    .modal-content {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 2rem;
-      border-radius: 15px;
-      backdrop-filter: blur(20px);
-      max-width: 90%;
-      color: white;
-      text-align: center;
-    }
-
-    .close {
-      position: absolute;
-      top: 1rem;
-      right: 2rem;
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-
-      .icon {
-        font-size: 2.5rem;
-      }
-
-      .modal {
-        display: flex;
-      }
+    /* ... (rest of your CSS unchanged, not repeated here for brevity) ... */
+    .hero-content-fade {
+      will-change: opacity, transform;
+      transition: opacity 0.4s, transform 0.4s;
     }
   </style>
 </head>
 <body>
-
-  <div class="modal" id="mobileModal">
-    <div class="modal-content">
-      <span class="close" onclick="document.getElementById('mobileModal').style.display='none'">&times;</span>
-      <h2>Mobile View Notice</h2>
-      <p>This website is optimized for mobile experience. Enjoy browsing Arshubra!</p>
+  <!-- Sticky NavBar -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <!-- (SVG unchanged) -->
+      <!-- ...SVG code omitted for brevity... -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 1024 1024"> ... </svg>
+    </div>
+    <div class="nav-center">
+      <a class="nav-menu-item" href="#">Home</a>
+      <a class="nav-menu-item" href="#">Portfolio</a>
+      <a class="nav-menu-item" href="#">Services</a>
+      <a class="nav-menu-item" href="#">Blog</a>
+      <a class="nav-menu-item" href="#">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="mailto:muktadirshabab@gmail.com?subject=Hire%20Me" class="hire-btn">Hire Me</a>
+    </div>
+    <button class="hamburger" aria-label="Open menu" tabindex="0">
+      <span class="apple-bar apple-bar1"></span>
+      <span class="apple-bar apple-bar2"></span>
+    </button>
+  </nav>
+  <div class="nav-dropdown-bg"></div>
+  <div class="nav-dropdown" id="navDropdown">
+    <div class="menu-items">
+      <a class="menu-item" href="#">Home</a>
+      <a class="menu-item" href="#">Portfolio</a>
+      <a class="menu-item" href="#">Services</a>
+      <a class="menu-item" href="#">Blog</a>
+      <a class="menu-item" href="#">Contact</a>
+    </div>
+    <div class="menu-bottom">
+      <div class="address">Dhaka, Bangladesh</div>
+      <a class="contact-link" href="tel:+8801234567890">+8801234567890</a>
+      <a class="contact-link" href="mailto:muktadirshabab@gmail.com?subject=Contact">muktadirshabab@gmail.com</a>
+      <a class="hire-btn" href="mailto:muktadirshabab@gmail.com?subject=Hire%20Me">Hire Me</a>
     </div>
   </div>
+  <!-- End NavBar -->
 
-  <header>
-    <img src="https://via.placeholder.com/100x100?text=Logo" alt="Arshubra Logo" />
-    <h1>Arshubra</h1>
-    <p>Your world, your art – Handcrafted & Customized</p>
-  </header>
-
-  <!-- Services Section -->
-  <section class="services">
-    <div class="card">
-      <div class="icon"><i class="fas fa-paint-brush"></i></div>
-      <h2>Handmade Painting</h2>
-      <p>Bring your imagination to life with bespoke handmade paintings. Perfect for gifting or decorating emotional and artistic spaces.</p>
-    </div>
-    <div class="card">
-      <div class="icon"><i class="fas fa-leather"></i></div>
-      <h2>Leather Customisation</h2>
-      <p>Transform your leather gear into artistic masterpieces with calligraphy, patterns, and vibrant detail work.</p>
-    </div>
-    <div class="card">
-      <div class="icon"><i class="fas fa-shoe-prints"></i></div>
-      <h2>Sneakers Customisation</h2>
-      <p>Style your steps with customized sneakers, designed to reflect your vibe—from graffiti to minimalist art.</p>
-    </div>
-    <div class="card">
-      <div class="icon"><i class="fas fa-mug-hot"></i></div>
-      <h2>Ceramics Customisation</h2>
-      <p>Custom cups, plates, and more—turn everyday ceramics into personal, practical art for your kitchen or décor.</p>
-    </div>
-  </section>
-
-  <!-- Portfolio Section -->
-  <section class="portfolio">
-    <div class="card">
-      <img src="https://via.placeholder.com/300x200?text=Painting" alt="Portfolio 1" />
-    </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/300x200?text=Leather" alt="Portfolio 2" />
-    </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/300x200?text=Sneakers" alt="Portfolio 3" />
-    </div>
-    <div class="card">
-      <img src="https://via.placeholder.com/300x200?text=Ceramics" alt="Portfolio 4" />
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section class="contact">
-    <div class="card">
-      <div class="icon"><i class="fas fa-envelope"></i></div>
-      <h2>Contact Us</h2>
-      <p>Email: <a href="mailto:contact@arshubra.com" style="color:#00d2ff;">contact@arshubra.com</a></p>
-      <p>Phone: <a href="tel:+1234567890" style="color:#00d2ff;">+1 234 567 890</a></p>
-      <div class="socials">
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-behance"></i></a>
+  <section class="hero">
+    <div class="circle"></div>
+    <div class="square"></div>
+    <div class="triangle"></div>
+    <div class="hero-content-fade" id="heroContentFade">
+      <h4><i class="fas fa-map-marker-alt"></i> Location</h4>
+      <h1>Muktadir Shabab</h1>
+      <h2>
+        <span>Web Designer</span>
+        <span>Writer</span>
+        <span>Actor</span>
+        <span>Digital Marketer</span>
+      </h2>
+      <p>
+        Hi, I am Muktadir Shabab — an artist, writer, actor, director, designer, and digital marketer. I am passionate about creativity and storytelling in all its forms.
+      </p>
+      <div class="buttons">
+        <button class="btn-black">Black Button</button>
+        <button class="btn-white">White Button</button>
       </div>
     </div>
+    <img src="https://res.cloudinary.com/dxiwnqpja/image/upload/v1759256689/20251001_002248_0000_edit_1388024773009116_dbvfmt.png" alt="Hero Image">
+    <div class="divider"></div>
   </section>
 
-  <footer>
-    © 2025 Arshubra. All rights reserved.
-  </footer>
-
   <script>
-    // Detect Desktop
-    if (window.innerWidth > 768) {
-      alert("Welcome to Arshubra! This version is optimized for mobile view.");
+    // Fixes browser toolbar color for light/dark mode using JS
+    function setThemeColorMeta() {
+      // (Use #fff for both modes, or change as desired)
+      var color = '#fff';
+      // If you want a different color for dark mode, use:
+      // var color = window.matchMedia('(prefers-color-scheme: dark)').matches ? '#fff' : '#fff';
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.name = "theme-color";
+        document.head.appendChild(meta);
+      }
+      // Remove and re-add to force update (Android Chrome sometimes needs this!)
+      meta.setAttribute('content', color);
+      document.head.removeChild(meta);
+      document.head.appendChild(meta);
     }
-  </script>
+    setThemeColorMeta();
+    // Listen for system color scheme changes
+    if (window.matchMedia) {
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', setThemeColorMeta);
+      window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', setThemeColorMeta);
+    }
 
+    // Hamburger animation + dropdown (unchanged)
+    const hamburger = document.querySelector('.hamburger');
+    const navDropdown = document.getElementById('navDropdown');
+    const dropdownBg = document.querySelector('.nav-dropdown-bg');
+    function openMenu() {
+      hamburger.classList.add('active');
+      navDropdown.classList.add('open');
+      dropdownBg.style.display = 'block';
+      setTimeout(() => dropdownBg.style.opacity = '1', 10);
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMenu() {
+      hamburger.classList.remove('active');
+      navDropdown.classList.remove('open');
+      dropdownBg.style.opacity = '0';
+      setTimeout(() => dropdownBg.style.display = 'none', 700);
+      document.body.style.overflow = '';
+    }
+    hamburger.addEventListener('click', function() {
+      if (!navDropdown.classList.contains('open')) openMenu();
+      else closeMenu();
+    });
+    dropdownBg.addEventListener('click', closeMenu);
+    document.addEventListener('keydown', function(e) {
+      if (e.key === "Escape" && navDropdown.classList.contains('open')) closeMenu();
+    });
+    document.querySelectorAll('.nav-dropdown .menu-item').forEach(item => {
+      item.addEventListener('click', closeMenu);
+    });
+
+    // Hero content fade on scroll (unchanged)
+    const heroContentFade = document.getElementById('heroContentFade');
+    const heroSection = document.querySelector('.hero');
+    window.addEventListener('scroll', function() {
+      const heroRect = heroSection.getBoundingClientRect();
+      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+      let scrollAmount = 0;
+      if (heroRect.top < windowHeight && heroRect.bottom > 0) {
+        scrollAmount = Math.max(0, -heroRect.top);
+      }
+      const fadeStart = 0;
+      const fadeEnd = 250;
+      let opacity = 1;
+      if (scrollAmount > fadeStart) {
+        opacity = Math.max(0, 1 - (scrollAmount - fadeStart) / (fadeEnd - fadeStart));
+      }
+      heroContentFade.style.opacity = opacity;
+      heroContentFade.style.transform = `translateY(${Math.min(scrollAmount, fadeEnd) * 0.25}px)`;
+    });
+  </script>
 </body>
 </html>
