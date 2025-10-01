@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Red Toolbar Demo</title>
 
-  <!-- Chrome, Firefox OS, Opera and Vivaldi (Android) -->
-  <meta name="theme-color" content="#ff0000">
+  <!-- Light mode toolbar color -->
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ff0000">
+  <!-- Dark mode toolbar color -->
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#ff0000">
+
   <!-- Windows Phone -->
   <meta name="msapplication-navbutton-color" content="#ff0000">
   <!-- iOS Safari -->
@@ -46,7 +49,7 @@
   <div class="toolbar-preview">Toolbar color: RED</div>
   <h1>Red Toolbar Demo</h1>
   <p>
-    This demo sets the browser toolbar color to <strong>red</strong> on supported browsers (mostly mobile).
+    This demo sets the browser toolbar color to <strong>red</strong> on supported browsers (mostly mobile), including when dark mode is enabled.
   </p>
   <p>
     Try opening this page on Android Chrome, Samsung Internet, or add to home screen for best effect!
